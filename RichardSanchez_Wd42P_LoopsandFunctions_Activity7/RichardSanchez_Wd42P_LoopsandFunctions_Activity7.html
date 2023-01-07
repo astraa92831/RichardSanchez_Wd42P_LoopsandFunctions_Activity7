@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1. Write a JS code to print numbers from 1 to 10, create a function and name it to displayNumbers;
+    function displayNumbers() {
+   for (let i = 1; i <= 10; i++) {
+    console.log(i);
+   }
+ }
+ displayNumbers();
+  </script>
+
+  <script>
+    /*2. Write a JS code to print Even numbers in given array.
+    Write a JS code to print Even numbers in given array.
+  - make a function that can accept array of numbers even or odd.
+  - then return the even numbers */
+
+  function getEvenNumbers(numbers) {
+  let evenNumbers = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      evenNumbers.push(numbers[i]);
+    }
+  }
+  return evenNumbers;
+ }
+
+ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ let evenNumbers = getEvenNumbers(numbers);
+ console.log(evenNumbers); // [2, 4, 6, 8, 10]
+</script>
+
+
+<script>
+  /* 3. Write a JS code to print a pattern using for loop
+  - create a function that will display the below pattern
+  - use 2 loops
+  1
+  1 2
+  1 2 3
+  1 2 3 4
+  1 2 3 4 5
+*/
+
+ function printPattern() {
+  let str = "";
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= i; j++) {
+      str += j + " ";
+    }
+    str += "<br>";
+  }
+  document.write(str);
+ }
+
+ printPattern();
+</script>
+
+
+<script>
+  /*4. Write a JS code to count all letters in a word.
+ - create a function that will accept a single string parameter
+ - use for loop to count
+ - return the number of characters in the given string*/
+
+ function countCharacters(str) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    count++;
+  }
+  return count;
+ }
+
+ let count = countCharacters("Richard");
+ console.log(count); // 7
+</script>
+
+<script>
+  /*5. Convert Hours into Seconds  		  	
+  - create a function to do the conversion of hours into seconds
+  - 60 seconds in a minute, 60 minutes in an hour
+  - Don't forget to return your answer.*/
+
+  function hoursToSeconds(hours) {
+  return hours * 60 * 60;
+ }
+
+ let seconds = hoursToSeconds(2);
+ console.log(seconds); // 7200
+</script>
+</body>
+</html>
